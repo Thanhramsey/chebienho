@@ -29,7 +29,7 @@
 								</div>
 								<div class="row">
 									<div class="col-md-12">
-										<div class="col-md-4" style="padding-left: 0px;">
+										<div class="col-md-6 style="padding-left: 0px;">
 											<div class="form-group">
 												<label>Loại sản phẩm<span class="maudo">(*)</span></label>
 												<select name="catid" class="form-control">
@@ -46,11 +46,11 @@
 												<div class="error" id="password_error"><?php echo form_error('catid') ?></div>
 											</div>
 										</div>
-										<div class="col-md-4" style="padding-right: 0px;">
+										<div class="col-md-6" style="padding-right: 0px;">
 											<div class="form-group">
-												<label>Xã <span class="maudo">(*)</span></label>
+												<label>Nhà cung cấp <span class="maudo">(*)</span></label>
 												<select name="producer" class="form-control">
-													<option value="">[--Chọn xã--]</option>
+													<option value="">[--Chọn nhà cung cấp--]</option>
 													<?php
 													$list = $this->Mproducer->producer_list();
 													$option_parentid = "";
@@ -63,7 +63,7 @@
 												<div class="error" id="password_error"><?php echo form_error('producer') ?></div>
 											</div>
 										</div>
-										<?php if($user['role'] == 1){ ?>
+										<!-- <?php if($user['role'] == 1){ ?>
 											<div class="col-md-4" style="padding-right: 0px;">
 											<div class="form-group">
 												<label>Nhà cung cấp <span class="maudo">(*)</span></label>
@@ -84,7 +84,7 @@
 										<?php } else { ?>
 											<div class="col-md-4" style="padding-right: 0px;">
 											</div>
-										<?php } ?>
+										<?php } ?> -->
 									</div>
 								</div>
 								<div class="form-group">

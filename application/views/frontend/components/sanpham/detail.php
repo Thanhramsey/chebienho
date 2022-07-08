@@ -504,37 +504,6 @@
 		});
 	}
 
-	function submitComment(id) {
-		var strurl = "<?php echo base_url(); ?>" + 'sanpham/insertCmt';
-		var comment = $("#commentContent").val();
-		// var userComment = $("#nguoi_gui").val();
-		// var sdt = $("#sdt").val();
-		var star = $("input[name='starsrt']:checked").val();
-		var validate = false;
-		if (comment === "" ) {
-			$("#commentContent").focus();
-		} else {
-			validate = true;
-		}
-		if (validate) {
-			jQuery.ajax({
-				url: strurl,
-				type: 'POST',
-				dataType: 'json',
-				data: {
-					id: id,
-					comment: comment,
-					userComment: '<?php $info = $this->session->userdata('sessionKhachHang');echo $info['username'] ?>',
-					sdt: '<?php $info = $this->session->userdata('sessionKhachHang');echo $info['phone'] ?>',
-					star: star
-				},
-				success: function(data) {
-					window.location.reload(true);
-				}
-			});
-		}
-	};
-
 	$( document ).ready(function() {
 		var total1 =<?php echo $total1 ?>;
 		var total2 =<?php echo $total2 ?>;
@@ -569,12 +538,49 @@
 				id: id,
 				question: comment,
 				type:2,
-				question_by: '<?php $info = $this->session->userdata('sessionKhachHang');echo $info['username'] ?>',
+				question_by: '<?php if ($this->session->userdata('sessionKhachHang')) : ?>
+						<?php $info = $this->session->userdata('sessionKhachHang') ; echo $info['username'] ?>
+						<?php endif; ?>',
+				question_by: '<?php if ($this->session->userdata('sessionKhachHang')) : ?>
+						<?php $info = $this->session->userdata('sessionKhachHang') ; echo $info['username'] ?>
+						<?php endif; ?>',
 			},
 			success: function(data) {
 				window.location.reload(true);
 			}
 		});
 	}
+	};
+	function submitComment(id) {
+		var strurl = "<?php echo base_url(); ?>" + 'sanpham/insertCmt';
+		var comment = $("#commentContent").val();
+		var star = $("input[name='starsrt']:checked").val();
+		var validate = false;
+		if (comment === "" ) {
+			$("#commentContent").focus();
+		} else {
+			validate = true;
+		}
+		if (validate) {
+			jQuery.ajax({
+				url: strurl,
+				type: 'POST',
+				dataType: 'json',
+				data: {
+					id: id,
+					comment: comment,
+					star: star,
+					userComment: '<?php if ($this->session->userdata('sessionKhachHang')) : ?>
+						<?php $info = $this->session->userdata('sessionKhachHang') ; echo $info['username'] ?>
+						<?php endif; ?>',
+					sdt: '<?php if ($this->session->userdata('sessionKhachHang')) : ?>
+						<?php $info = $this->session->userdata('sessionKhachHang') ; echo $info['phone'] ?>
+						<?php endif; ?>',
+				},
+				success: function(data) {
+					window.location.reload(true);
+				}
+			});
+		}
 	};
 </script>

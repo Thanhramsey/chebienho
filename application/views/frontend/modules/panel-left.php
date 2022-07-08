@@ -50,7 +50,7 @@
 <div class="col-md-12 col-lg-12 panel-right hidden-xs text-center" style="background: #3a8701;">
 	<ul class="menu-right" style="display: inline-block;">
 		<li class="pull-left"><a href="">Trang chủ</a></li>
-		<li class="dropdown pull-left">
+		<!-- <li class="dropdown pull-left">
 			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sản phẩm theo xã <span class="caret"></span></a>
 			<ul class="dropdown-menu">
 				<?php
@@ -66,8 +66,8 @@
 				}
 				?>
 			</ul>
-		</li>
-		<li class="dropdown pull-left">
+		</li> -->
+		<!-- <li class="dropdown pull-left">
 			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sản phẩm theo loại <span class="caret"></span></a>
 			<ul class="dropdown-menu">
 				<?php
@@ -83,8 +83,8 @@
 				}
 				?>
 			</ul>
-		</li>
-		<li class="pull-left"><a href="ketnoicungcau">Kết nối cung cầu</a></li>
+		</li> -->
+		<!-- <li class="pull-left"><a href="ketnoicungcau">Kết nối cung cầu</a></li> -->
 		<li class="pull-left"><a href="san-pham">Sản phẩm</a></li>
 		<li class="pull-left"><a href="tin-tuc/1">Tin tức</a></li>
 		<li class="pull-left"><a href="van-ban">Chính Sách</a></li>

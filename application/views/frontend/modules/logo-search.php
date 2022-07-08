@@ -1,17 +1,17 @@
 <section class="logo-search">
 	<div class="container">
 		<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 logo">
-			<a href="<?php echo base_url() ?>"><img src="<?php echo base_url() ?>public/images/logo.jpg" alt="Logo Construction"></a>
+			<a href="<?php echo base_url() ?>"><img src="<?php echo base_url() ?>public/images/logo.png" alt="Logo Construction"></a>
 		</div>
 		<div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 search">
 			<div class="contact-row">
-				<!-- <div class="phone inline">
-          <i class="icon fa fa-phone"></i> (0269) 3 850 009
-        </div>
-        <div class="contact inline">
-          <i class="icon fa fa-envelope"></i> ubndchupuh@gialai.gov.vn
-        </div> -->
+			<div class="phone inline">
+			<i class="icon fa fa-phone"></i> 026 938 934 34
 			</div>
+			<div class="contact inline">
+			<i class="icon fa fa-envelope"></i> bhtgialai@yahoo.com.vn
+			</div>
+		</div>
 			<form action="search" method="get" role="form">
 				<div class="input-search">
 					<input style="width: 60%;" type="text" class="form-control" id="search_text" name="search" placeholder="Nhập từ khóa để tìm kiếm...">

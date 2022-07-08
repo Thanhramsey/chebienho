@@ -76,7 +76,7 @@
         </section>
         <!--CONTENT-->
         <?php
-		ob_start();
+		// ob_start();
             if(isset($com,$view)){
                 $this->load->view('frontend/components/'.$com.'/'.$view);
             }
